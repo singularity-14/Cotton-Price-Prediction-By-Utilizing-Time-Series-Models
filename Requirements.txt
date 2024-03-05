@@ -1,0 +1,10 @@
+pandas
+numpy
+pmdarima
+matplotlib
+statsmodels
+sklearn
+math
+tensorflow
+keras
+
