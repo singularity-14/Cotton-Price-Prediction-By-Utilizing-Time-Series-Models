@@ -111,13 +111,13 @@ pip install pandas numpy matplotlib statsmodels tensorflow
 
 ## 👥 Team
 
-| Name | GitHub |
-|------|--------|
-| Nishtha Ahuja | — |
-| Rachit Patel | — |
-| Pradip Patelia | — |
-| Dip Patel | — |
-| Dhruvi Shah | — |
+| Name |
+|------|
+| Nishtha Ahuja |
+| Rachit Patel |
+| Pradip Patelia |
+| Dip Patel |
+| Dhruvi Shah |
 
 ---
 
