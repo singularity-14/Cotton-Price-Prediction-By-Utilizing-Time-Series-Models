@@ -1,75 +1,130 @@
-# Cotton Price Prediction Using Time Series Models
+# 🌾 Cotton Price Prediction Using Time Series Models
 
-## Overview
+> Forecasting agricultural commodity prices using classical and deep learning approaches — ARIMA, VAR, and LSTM — to support data-driven decisions in the cotton industry.
 
-In the realm of agricultural economics, predicting cotton prices holds significant importance for stakeholders ranging from farmers and traders to policymakers and the textile industry. This project undertakes a comprehensive study into predicting cotton prices utilizing various time series models, including ARIMA, VAR, and LSTM. The analysis focuses on two specific markets, offering valuable insights for decision-makers within the cotton industry.
+---
 
-## Models Explored
+## 📌 Project Overview
 
-### ARIMA (Autoregressive Integrated Moving Average)
-- A classical time series method known for its simplicity and interpretability.
-- Balances model fit and complexity, making it a solid choice for accurate predictions.
-- Provides insights into the temporal patterns of cotton prices.
+Cotton price volatility directly impacts farmers, traders, textile manufacturers, and policymakers. This project builds and compares multiple time series forecasting models to predict cotton prices across two market segments, providing actionable insights for stakeholders in the agricultural economy.
 
-### VAR (Vector Autoregression)
-- Considers the interdependencies among multiple time series variables, offering a different approach to modeling.
-- Valuable for understanding and predicting the joint behavior of interconnected variables.
-- Offers insights into the relationships between cotton prices and other relevant factors.
+**Key Question:** Which forecasting model best balances accuracy, interpretability, and practical usability for cotton price prediction?
 
-### LSTM (Long Short-Term Memory)
-- A deep learning neural network type known for its ability to capture complex patterns and nonlinear dependencies within data.
-- Achieves exceptional predictive accuracy with low Root Mean Squared Error (RMSE).
-- Ideal for stakeholders prioritizing predictive precision and accuracy.
+---
 
-## Results and Insights
+## 🚀 Tech Stack
 
-- **ARIMA**: Strikes a balance between model simplicity and performance, boasting low Akaike's Information Criterion (AIC) and Schwarz Bayesian Information Criterion (BIC) values.
-- **VAR**: Offers insights into the interdependencies among variables, although with slightly higher RMSE compared to other models.
-- **LSTM**: Stands out as a top performer, achieving exceptional predictive accuracy with impressively low RMSE.
-  
-## Conclusion
+| Category | Tools & Libraries |
+|----------|------------------|
+| Language | Python 3.x |
+| Deep Learning | TensorFlow / Keras (LSTM) |
+| Statistical Modeling | Statsmodels (ARIMA, VAR) |
+| Data Processing | Pandas, NumPy |
+| Visualization | Matplotlib |
+| Notebook | Jupyter Notebook |
 
-The choice of model depends on the specific needs of the analysis:
-- Stakeholders prioritizing predictive accuracy may opt for LSTM.
-- Those seeking a balance between accuracy and interpretability may choose ARIMA.
-- For understanding and managing volatility in cotton prices, VAR provides valuable insights into interdependencies among variables.
+---
 
-## Usage
+## 🧠 Models Implemented
 
-1. **Data Collection**:
-   - Gather historical cotton price data from reliable sources.
-   
-2. **Model Training**:
-   - Utilize the provided Python scripts to train ARIMA, VAR, and LSTM models on the historical data.
-   - Tune model hyperparameters as needed.
+### 1. ARIMA (Autoregressive Integrated Moving Average)
+- Classical statistical approach for univariate time series
+- Optimized using AIC/BIC criteria to balance fit vs. complexity
+- Best suited for stakeholders needing **interpretable, audit-friendly** predictions
 
-3. **Evaluation**:
-   - Evaluate model performance using metrics such as RMSE and AIC/BIC values.
-   - Choose the model that best suits the specific requirements and objectives.
+### 2. VAR (Vector Autoregression)
+- Multivariate model capturing **interdependencies** between cotton prices and related economic indicators
+- Reveals how variables influence each other over time
+- Useful for understanding **macro-level market dynamics**
 
-## File Structure
+### 3. LSTM (Long Short-Term Memory Neural Network)
+- Deep learning model designed to capture **complex nonlinear patterns** in sequential data
+- Achieved the **lowest RMSE** among all tested models
+- Best suited for applications where **predictive accuracy is the top priority**
 
-- `code.ipynb`: Python script for Time Series model's training and predictions.
-- `LSTM.py`: Python script for LSTM model training and prediction.
-- `README.md`: This file providing an overview and instructions.
+---
 
-## Dependencies
+## 📊 Results Summary
 
-- Python 3.x
-- Pandas
-- NumPy
-- Matplotlib
-- Statsmodels (for ARIMA)
-- TensorFlow (for LSTM)
+| Model | Strength | RMSE | Best For |
+|-------|----------|------|----------|
+| ARIMA | Interpretability + AIC/BIC optimization | Moderate | Explainable forecasts |
+| VAR | Multi-variable interdependency analysis | Higher | Market relationship insights |
+| LSTM | Nonlinear pattern recognition | **Lowest** | High-accuracy forecasting |
 
-## License
+> **LSTM outperformed classical models** in predictive accuracy, while ARIMA offered the best balance of simplicity and performance.
+
+---
+
+## 📂 Project Structure
+
+```
+cotton-price-prediction/
+│
+├── code.ipynb        # End-to-end pipeline: EDA, ARIMA & VAR training, evaluation
+├── LSTM.py           # Standalone LSTM model training and prediction script
+└── README.md         # Project documentation
+```
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+```bash
+pip install pandas numpy matplotlib statsmodels tensorflow
+```
+
+### Run the Project
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/<your-username>/cotton-price-prediction.git
+   cd cotton-price-prediction
+   ```
+
+2. **Prepare your data**
+   - Add historical cotton price data (CSV format) to the project directory
+   - Ensure date and price columns are correctly formatted
+
+3. **Train & Evaluate Models**
+   - Open `code.ipynb` in Jupyter Notebook for ARIMA and VAR models
+   - Run `LSTM.py` for the deep learning model:
+     ```bash
+     python LSTM.py
+     ```
+
+4. **Evaluate Results**
+   - Compare models using **RMSE** (lower = better accuracy)
+   - Use **AIC/BIC** to assess ARIMA model fit
+
+---
+
+## 💡 Key Learnings & Takeaways
+
+- Deep learning (LSTM) significantly outperforms classical models in **raw predictive accuracy** for commodity pricing
+- Classical models (ARIMA) remain valuable where **explainability and regulatory compliance** matter
+- Multivariate approaches (VAR) provide richer insights when **correlated economic factors** are available
+- Hyperparameter tuning and data preprocessing are critical bottlenecks in time series forecasting pipelines
+
+---
+
+## 👥 Team
+
+| Name | GitHub |
+|------|--------|
+| Nishtha Ahuja | — |
+| Rachit Patel | — |
+| Pradip Patelia | — |
+| Dip Patel | — |
+| Dhruvi Shah | — |
+
+---
+
+## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Author
+---
 
-- Nishtha Ahuja
-- Rachit Patel
-- Pradip Patelia
-- Dip Patel
-- Dhruvi Shah 
+*Built as part of an academic exploration into machine learning applications in agricultural economics.*
